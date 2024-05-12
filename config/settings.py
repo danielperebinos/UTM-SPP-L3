@@ -20,6 +20,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    "drf_yasg",
+
     'apps.shortener',
 ]
 
@@ -124,4 +126,9 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success"
     },
     "actions_sticky_top": False
+}
+
+
+SWAGGER_SETTINGS = {
+    "SECURITY_DEFINITIONS": None
 }
