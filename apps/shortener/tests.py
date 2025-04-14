@@ -6,11 +6,8 @@ from apps.shortener.utils import Encoder
 
 
 class UrlShortenerTests(TestCase):
-
     def test_create_short_url_successfully(self):
-        payload = {
-            "url": "https://www.django-rest-framework.org/api-guide/serializers/#modelserializer"
-        }
+        payload = {"url": "https://www.django-rest-framework.org/api-guide/serializers/#modelserializer"}
         response = self.client.post(reverse("shortly"), data=payload)
         self.assertEqual(response.status_code, 201)
 

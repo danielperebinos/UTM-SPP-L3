@@ -16,7 +16,5 @@ class ShortUrlSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         slug = Encoder.retrive_key(validated_data["url"])
-        short_url, created = ShortUrl.objects.get_or_create(
-            slug=slug, url=validated_data["url"]
-        )
+        short_url, created = ShortUrl.objects.get_or_create(slug=slug, url=validated_data["url"])
         return short_url
